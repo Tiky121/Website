@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Tibensky</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+
+  <link rel="icon" href="icons/logo.ico" type="image/x-icon">
+
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="theme-toggle">
+      <button id="theme-button"></button>
+    </div>
+  </nav>
+
+  <!-- Main Intro Section -->
+  <main class="intro">
+    <div class="content-wrapper">
+      <div class="intro-text">
+        <h1>Simon Tibensky</h1>
+        <p>29-year-old software developer and 3D artist from Slovakia &#127480;&#127472; based in Bratislava</p>
+        <p>I love creating apps, designing 3D models, and solving complex problems.</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/simon-tibensk%C3%BD-7459091b0/" target="_blank"><img src="icons/in.png" alt="LinkedIn"></a>
+          <a href="https://github.com/Tiky121" target="_blank"><img src="icons/gh.png" alt="GitHub"></a>
+          <a href="mailto:simontibensky2@gmail.com" target="_blank"><img src="icons/em.png" alt="Email"></a>
+        </div>
+      </div>
+      <div class="intro-image">
+        <img src="images/me.gif" alt="Profile Photo">
+      </div>
+    </div>
+  </main>
+
+  <!-- Work and Education Section -->
+  <section class="work-education">
+    <div class="tabs-container">
+      <div class="tabs">
+        <button class="tab-link active" onclick="openTab(event, 'work')">Work</button>
+        <button class="tab-link" onclick="openTab(event, 'education')">Education</button>
+      </div>
+    </div>
+
+    <!-- Content for Work and Education -->
+    <div id="work-content" class="tab-content">
+
+        <div class="education-entry">
+            <a href="https://art4.sk/" target="_blank" class="education-logo">
+                <img src="icons/art4.png" alt="FEI STU Logo">
+            </a>
+            <div class="education-details">
+                <span>2020 - Present</span>
+                <h3>ART4</h3>
+                <p>Lead 3D designer, Programmer</p>
+            </div>
+        </div>
+        
+        <div class="education-entry">
+            <a href="https://www.stuba.sk/" target="_blank" class="education-logo">
+                <img src="icons/stu.png" alt="FEI STU Logo">
+            </a>
+            <div class="education-details">
+                <span>2018 - Present</span>
+                <h3>Slovak University of Technology in Bratislava</h3>
+                <p>Researcher</p>
+                <ul class="research-list">
+                    <li>Exploring Gaussian Splatting, NeRF, and photogrammetry</li>
+                    <li>Innovating new methods for virtualizing and capturing interior spaces</li>
+                    <li>Designing algorithms for optimal camera placement in 3D environments</li>
+                    <li>Collaborating on various European research projects</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <div id="education-content" class="tab-content" style="display: none;">
+
+        <!-- Second Education Entry (PhD) -->
+        <div class="education-entry">
+            <a href="https://www.fei.stuba.sk/" target="_blank" class="education-logo">
+              <img src="icons/fei.png" alt="FEI STU Logo">
+            </a>
+            <div class="education-details">
+              <span>2021 - Present</span>
+              <h3>Slovak University of Technology in Bratislava</h3>
+              <p>PhD, Informatics</p>
+            </div>
+        </div>
+
+        <!-- First Education Entry -->
+        <div class="education-entry">
+          <a href="https://www.fei.stuba.sk/" target="_blank" class="education-logo">
+            <img src="icons/fei.png" alt="FEI STU Logo">
+          </a>
+          <div class="education-details">
+            <span>Sep 2019 - Jun 2021</span>
+            <h3>Slovak University of Technology in Bratislava</h3>
+            <p>Ing, Telecommunications</p>
+            <p>Activities and societies: Football</p>
+          </div>
+        </div>
+      
+      </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="featured-projects">
+    <div class="section-header">
+      <h2>Featured Projects</h2>
+      <a href="projects.html" class="view-more">view more ➔</a>
+    </div>
+    <div class="projects-container">
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <img src="images/Traktor.png" alt="Tradingview Telegram Alerts" class="project-image">
+        <h3>Tractor simulator</h3>
+        <p>Project for Ekocentrum Čunovo is an interactive tractor simulator where visitors can drive and complete tasks, learning sustainable land management practices. It aims to promote environmentally friendly farming through hands-on experience.</p>
+        <div class="tags">
+          <span>Unity</span>
+          <span>C#</span>
+          <span>Photoshop</span>
+          <span>Blender</span>
+          <span>Substance Painter</span>
+        </div>
+        <a href="https://www.kastielcunovo.sk/o-nas/" class="project-link">Website</a>
+      </div>
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <img src="images/Erste2.png" alt="NFTVue" class="project-image">
+        <h3>Erste Digital</h3>
+        <p>Virtual 3D tour of Erste Digital office using Gaussian Splatting, designed for new employees to explore and familiarize themselves with the workspace in an immersive VR-compatible environment.</p>
+        <div class="tags">
+          <span>JavaScript</span>
+          <span>ThreeJs</span>
+          <span>LumaJs</span>
+          <span>Blender</span>
+          <span>CSS</span>
+          <span>HTML</span>
+          <span>Gaussian Splatting</span>
+        </div>
+        <a href="Erste/MeetingRoomOne.html" class="project-link" target="_blank">Try it yourself</a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-left">
+      <p>&copy; 2024 simontibensky.com</p>
+    </div>
+    <div class="footer-right">
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/simon-tibensk%C3%BD-7459091b0/" target="_blank"><img src="icons/in.png" alt="LinkedIn"></a>
+        <a href="https://github.com/Tiky121" target="_blank"><img src="icons/gh.png" alt="GitHub"></a>
+        <a href="mailto:simontibensky2@gmail.com" target="_blank"><img src="icons/em.png" alt="Email"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
