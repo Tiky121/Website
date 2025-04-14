@@ -41,7 +41,6 @@ function openTab(event, tabName) {
     document.getElementById(tabName + "-content").style.display = "block";
     event.currentTarget.classList.add("active");
 }
-
 // Form submission handling
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact-form");
@@ -50,16 +49,24 @@ document.addEventListener("DOMContentLoaded", () => {
         
         const formData = new FormData(form);
         try {
-            const response = await fetch("send_email.php", {
+            const response = await fetch(form.action, {  // Dynamicky získame endpoint z formular.action
                 method: "POST",
                 body: formData,
+                headers: {
+                    "Accept": "application/json" // Pridanie hlavičky pre JSON odpoveď
+                }
             });
             if (response.ok) {
-                window.location.href = "thank_you.html"; // Redirect on success
+                // Ak chceš použiť presmerovanie, môžeš čerpať z _next skrytého poľa:
+                const nextUrl = form.querySelector("input[name='_next']")?.value || "thank_you.html";
+                window.location.href = nextUrl; // Redirect on success
             } else {
-                alert("There was an error sending your message. Please try again.");
+                // Pre lepšiu diagnostiku môžeš skúsiť zobraziť odpoveď:
+                const data = await response.json();
+                alert(data?.error || "There was an error sending your message. Please try again.");
             }
         } catch (error) {
+            console.error("Error sending message:", error);
             alert("Failed to send message. Please try again later.");
         }
     });
