@@ -122,10 +122,10 @@ canvas {
   transform: scale(1.2);
 }
 
-/* Intro Image Styles */
+
 .intro-image {
   position: relative;
-  width: 300px;   /* môžeš zmeniť podľa potreby */
+  width: 300px;  
   height: 300px;
 }
 
@@ -139,7 +139,7 @@ canvas {
 }
 
 .intro-image iframe {
-  display: none; /* skryté kým sa neklikne */
+  display: none; 
 }
 
 .intro-image button {
@@ -695,4 +695,5 @@ body.dark-mode .education-details span {
 body.dark-mode .education-logo img {
   filter: brightness(0) invert(1); /* Adjusts logo color for dark mode */
 }
+
 
