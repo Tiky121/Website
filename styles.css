@@ -124,19 +124,41 @@ canvas {
 
 /* Intro Image Styles */
 .intro-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  position: relative;
+  width: 300px;   /* môžeš zmeniť podľa potreby */
+  height: 300px;
 }
 
-.intro-image img {
-  width: 60%;
-  height: auto;
-  border-radius: 8px;
+.intro-image img,
+.intro-image iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: block;
 }
 
+.intro-image iframe {
+  display: none; /* skryté kým sa neklikne */
+}
+
+.intro-image button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.intro-image button:hover {
+  background: rgba(0,0,0,0.8);
+}
 /* Work and Education Section */
 .work-education {
   width: 50%;
@@ -409,9 +431,6 @@ body.dark-mode .view-more:hover {
     position: relative;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.9);
-  }
-  .intro-image img{
-    width: 100%;
   }
   .footer {
     width: 100%;

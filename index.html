@@ -37,17 +37,23 @@
         </div>
       </div>
       <div class="intro-image">
+        <img src="images/me.jpg" alt="Profile Photo" id="profileImage">
         <iframe 
-            src="profile.html" 
-            title="Gaussian Splatting Profile" 
-            width="300" 
-            height="300" 
-            style="border:none; border-radius:12px; overflow:hidden;">
+          src="profile.html" 
+          title="Gaussian Splatting Profile" 
+          id="profileIframe">
         </iframe>
+        <button id="switchButton">3D</button>
       </div>
     </div>
   </main>
-
+  <script>
+    document.getElementById("switchButton").addEventListener("click", function() {
+      document.getElementById("profileImage").style.display = "none";
+      document.getElementById("profileIframe").style.display = "block";
+      this.style.display = "none"; // button zmizne po kliknutí
+    });
+  </script>
   <!-- Work and Education Section -->
   <section class="work-education">
     <div class="tabs-container">
@@ -174,4 +180,3 @@
   </footer>
 </body>
 </html>
-
